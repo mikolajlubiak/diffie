@@ -15,6 +15,6 @@ public:
   }
 
   uint64_t SharedSecret(const Diffie &d) const {
-    return std::pow(d.Exchange(), secret);
+    return static_cast<uint64_t>(std::pow(d.Exchange(), secret));
   }
 };
